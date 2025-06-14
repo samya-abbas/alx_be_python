@@ -7,6 +7,8 @@ class TestSimpleCalculator(unittest.TestCase):
         self.calc = SimpleCalculator()
 
     def test_addition(self):
+        """ Test the addition method with various scenarios, including positive,
+        negative, mixed numbers, and zero."""
         self.assertEqual(self.calc.add(2, 3), 5)
         self.assertEqual(self.calc.add(-1, 1), 0)
         self.assertEqual(self.calc.add(5, 0), 5)
