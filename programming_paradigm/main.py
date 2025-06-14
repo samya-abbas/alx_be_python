@@ -11,9 +11,10 @@ def main():
 
     result = safe_divide(numerator, denominator)
 
-    if isinstance(result, (int, float)):
+    if isinstance(result, str):
+        print(result)
+    else:
         print(f"The result of the division is {result}")
-
 
 if __name__ == "__main__":
     main()
