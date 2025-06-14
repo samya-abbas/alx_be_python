@@ -16,7 +16,7 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertAlmostEqual(self.calc.add(0.1, 0.2), 0.3)
 
 
-    def test_subtract(self):
+    def test_subtraction(self):
         # Test subtraction with two positive numbers
         self.assertEqual(self.calc.subtract(10, 5), 5)
         self.assertEqual(self.calc.subtract(5, 10), -5)
@@ -34,7 +34,7 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertAlmostEqual(self.calc.subtract(7.5, 2.5), 5.0)
         self.assertAlmostEqual(self.calc.subtract(10.0, 0.1), 9.9)
 
-    def test_multiply(self):
+    def test_multiplication(self):
         # Test multiplication with two positive numbers
         self.assertEqual(self.calc.multiply(5, 3), 15)
         self.assertEqual(self.calc.multiply(10, 0.5), 5.0)
@@ -51,7 +51,7 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertAlmostEqual(self.calc.multiply(2.5, 2.0), 5.0)
         self.assertAlmostEqual(self.calc.multiply(0.5, 0.5), 0.25)
 
-    def test_divide(self):
+    def test_division(self):
         # Test division with two positive numbers
         self.assertEqual(self.calc.divide(10, 2), 5.0)
         self.assertEqual(self.calc.divide(7, 2), 3.5)
@@ -76,5 +76,7 @@ class TestSimpleCalculator(unittest.TestCase):
 
 
 if __name__ == '__main__':
+    
     unittest.main(argv=['first-arg-is-ignored'], exit=False)
+
 
