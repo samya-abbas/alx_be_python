@@ -6,29 +6,12 @@ class TestSimpleCalculator(unittest.TestCase):
     def setUp(self):
         self.calc = SimpleCalculator()
 
-    def test_add_positive_numbers(self):
-        """Test addition with two positive numbers."""
-        self.assertEqual(self.calc.add(5, 3), 8)
-        self.assertEqual(self.calc.add(100, 200), 300)
-
-    def test_add_negative_numbers(self):
-        """Test addition with two negative numbers."""
-        self.assertEqual(self.calc.add(-5, -3), -8)
-        self.assertEqual(self.calc.add(-10, -20), -30)
-
-    def test_add_mixed_numbers(self):
-        """Test addition with a mix of positive and negative numbers."""
-        self.assertEqual(self.calc.add(-5, 3), -2)
-        self.assertEqual(self.calc.add(10, -7), 3)
-
-    def test_add_with_zero(self):
-        """Test addition involving zero."""
+    def test_addition(self):
+        self.assertEqual(self.calc.add(2, 3), 5)
+        self.assertEqual(self.calc.add(-1, 1), 0)
         self.assertEqual(self.calc.add(5, 0), 5)
-        self.assertEqual(self.calc.add(0, -10), -10)
-        self.assertEqual(self.calc.add(0, 0), 0)
-
-    def test_add_float_numbers(self):
-        """Test addition with floating-point numbers."""
+        self.assertEqual(self.calc.add(-5, -3), -8)
+        self.assertEqual(self.calc.add(10, -7), 3)
         self.assertAlmostEqual(self.calc.add(2.5, 3.5), 6.0)
         self.assertAlmostEqual(self.calc.add(0.1, 0.2), 0.3)
 
@@ -121,3 +104,4 @@ class TestSimpleCalculator(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main(argv=['first-arg-is-ignored'], exit=False)
+
