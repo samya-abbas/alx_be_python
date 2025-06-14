@@ -12,7 +12,7 @@ def main():
     result = safe_divide(numerator, denominator)
 
     if isinstance(result, (int, float)):
-        print(f"The result of the division is {result}")
+        print(f"The result of the division is{result}")
     else:
         print(result)
 
