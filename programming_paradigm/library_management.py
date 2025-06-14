@@ -1,3 +1,9 @@
+class Book:
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+        self._is_checked_out = False
+        
 class Library:
     def __init__(self):
         self._books = []
@@ -25,7 +31,7 @@ class Library:
                     print(f"Book '{title}' has been checked out.")
                 else:
                     print(f"Book '{title}' is already checked out.")
-                return # Exit once the book is found and processed
+                return
         if not found:
             print(f"Book '{title}' not found in the library.")
 
