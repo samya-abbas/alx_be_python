@@ -1,9 +1,10 @@
 class Book:
+
     def __init__(self, title, author):
         self.title = title
         self.author = author
-        self._is_checked_out = False
-        
+        self._is_checked_out = False  # By default, a new book is not checked out
+
 class Library:
     def __init__(self):
         self._books = []
@@ -13,6 +14,7 @@ class Library:
             print("Error: Only Book objects can be added to the library.")
             return
 
+        # Check if a book with the same title and author already exists
         for existing_book in self._books:
             if existing_book.title == book.title and existing_book.author == book.author:
                 print(f"Book '{book.title}' by {book.author} already exists in the library.")
@@ -31,7 +33,7 @@ class Library:
                     print(f"Book '{title}' has been checked out.")
                 else:
                     print(f"Book '{title}' is already checked out.")
-                return
+                return # Exit once the book is found and processed
         if not found:
             print(f"Book '{title}' not found in the library.")
 
@@ -45,7 +47,7 @@ class Library:
                     print(f"Book '{title}' has been returned.")
                 else:
                     print(f"Book '{title}' was not checked out.")
-                return
+                return # Exit once the book is found and processed
         if not found:
             print(f"Book '{title}' not found in the library.")
 
