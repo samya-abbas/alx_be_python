@@ -11,6 +11,7 @@ def main():
 
     result = safe_divide(numerator, denominator)
     
+    # Check if result is a string (error message)
     if isinstance(result, str):
         print(result)
     else:
